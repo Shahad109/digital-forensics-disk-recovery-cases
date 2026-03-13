@@ -1,0 +1,18 @@
+# GPT Layout
+
+Sector | Structure | Description
+0      | Protective MBR | Protects GPT disk from legacy MBR tools
+1      | Primary GPT Header | Main GPT metadata
+2-33   | Partition Entry Array | Partition definitions
+Last-33 to Last-2 | Backup Partition Entry Array | Backup partition entries
+Last Sector | Backup GPT Header | Backup GPT metadata
+
+## GPT Header Important Fields
+
+Field           | Description
+CurrentLBA      | Current GPT header location
+BackupLBA       | Backup GPT header location
+FirstUsableLBA  | First usable sector for partitions
+LastUsableLBA   | Last usable sector for partitions
+PartitionLBA    | Partition entry start sector
+NumPartitions   | Number of GPT entries
