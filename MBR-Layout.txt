@@ -1,0 +1,11 @@
+# MBR Layout
+
+Offset Start | Offset End | Size (Bytes) | Description
+0            | 445        | 446          | Boot Code Area
+446          | 461        | 16           | Partition Entry 1
+462          | 477        | 16           | Partition Entry 2
+478          | 493        | 16           | Partition Entry 3
+494          | 509        | 16           | Partition Entry 4
+510          | 511        | 2            | Signature (0x55 0xAA)
+
+Total Sector Size = 512 Bytes
